@@ -1,0 +1,10 @@
+<div id="comment-<%= comment_id %>" class="archived-comment">
+  <% if (who.url != ''){ %>
+    <a href="<%= who.url %>" class="who"><%= who.name %></a>
+  <% } else { %>
+    <span class="who"><%= who.name %></span>
+  <% } %>
+  on
+  <a href="{{ page.url }}#comment-<%= comment_id %>" class="when"><%= when %></a>
+  <blockquote><%= content %></blockquote>
+</div>
